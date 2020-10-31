@@ -37,6 +37,10 @@
   font-size: 12px;
 }
 
+.subscribe-button:hover {
+  cursor: pointer;
+}
+
 .unsubscribe {
   display: inline-block;
   text-decoration: underline;

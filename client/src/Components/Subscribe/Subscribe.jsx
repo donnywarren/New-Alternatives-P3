@@ -27,8 +27,9 @@ const Subscribe = () => {
     if (!address) {
       alert("Address not found")
     } else {
+      updateEmailInput("")
       localStorage.removeItem("email-address")
-      alert(`${address} has been removed from our mailing list.`)
+      alert(`Your address has been removed from our mailing list.`)
     }
   
   }
