@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
 import Subscribe from "../../Subscribe/Subscribe";
-import Social from "../../Social/Social";
 import Seal from "../../../Assets/seal-of-transparency.png";
 import Facebook from "../../../Assets/facebook-white.png";
 import Twitter from "../../../Assets/twitter-white.png";

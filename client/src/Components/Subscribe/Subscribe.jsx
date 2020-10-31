@@ -3,16 +3,18 @@ import "./Subscribe.css";
 
 const Subscribe = () => {
   const [emailInput, updateEmailInput] = useState("");
-  const [nameInput, updateNameInput] = useState("");
 
   const handleStorage = (e) => {
     e.preventDefault();
-    console.log(`current ${emailInput}`);
-    sessionStorage.setItem("bill", emailInput);
-    updateEmailInput("");
-    console.log(`updated ${emailInput}`);
-    const tim = sessionStorage.getItem("don");
-    console.log(tim);
+    if (emailInput !== "") {
+      localStorage.setItem("email-address", emailInput);
+      updateEmailInput("");
+      const address = localStorage.getItem("email-address");
+      alert(`${address} has been added to our mailing list.`)
+    } else {
+      alert("Please enter your email")
+    }
+    
   };
 
   const handleChange = (e) => {
@@ -20,8 +22,19 @@ const Subscribe = () => {
     updateEmailInput(email);
   };
 
+  const handleRemove = () => {
+    const address = localStorage.getItem("email-address")
+    if (!address) {
+      alert("Address not found")
+    } else {
+      localStorage.removeItem("email-address")
+      alert(`${address} has been removed from our mailing list.`)
+    }
+  
+  }
+
   return (
-    <>
+    <div className="email-container">
       <form className="email-form" onSubmit={handleStorage}>
         <input
           type="email"
@@ -32,7 +45,10 @@ const Subscribe = () => {
         />
         <button className="subscribe-button">Subscribe</button>
       </form>
-    </>
+      <div className="unsubscribe" onClick={handleRemove}>
+          unsubscribe
+      </div>
+    </div>
   );
 };
 
