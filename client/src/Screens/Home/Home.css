@@ -4,14 +4,15 @@
   justify-content: space-around;
   height: 380px;
   max-height: 380px;
+  width: 80vw;
   padding-top: 40px;
-  margin-right: 170px;
-  margin-left: 200px;
+  margin: auto;
 }
 
 .icon {
   display: flex;
   flex-direction: column;
+  min-width: 165px;
 }
 
 .icon-text {
@@ -55,22 +56,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: space-evenly;
   height: 520px;
-  max-height: 520px;
-  margin-top: 0px;
-  background-color: rgb(255, 255, 255);
+  margin: auto;
 }
 
 .get-involved-icons {
   display: flex;
   justify-content: space-evenly;
-  height: 160px;
 }
 
-.get-involved-text {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+.icon-card {
+  min-width: 165px;
 }
 
 .get-involved h1 {

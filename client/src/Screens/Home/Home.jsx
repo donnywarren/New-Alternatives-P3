@@ -33,7 +33,7 @@ const Home = () => {
             </div>
             <div className="icon-text">
               <h1>40%</h1>
-              <p>of LGBTQ+ are homeless in NYC</p>
+              <p>of LGBTQ+ are<br/>homeless in NYC</p>
             </div>
           </div>
           <div className="icon">
@@ -59,21 +59,25 @@ const Home = () => {
         <div className="get-involved">
           <h1>Get Involved</h1>
           <div className="get-involved-icons">
-            <img src={IconTwoHands} alt="Icon: Two hands" />
-            <img
-              src={IconHandsHeart}
-              alt="Icon: Hands in the shape of a heart"
-            />
+            <div className="icon-card">
+              <img src={IconTwoHands} alt="Icon: Two hands" />
+              <h2>Get Help</h2>
+            </div>
+            <div className="icon-card">
+              <img
+                src={IconHandsHeart}
+                alt="Icon: Hands in the shape of a heart"
+              />
+              <h2>Volunteer</h2>
+            </div>
+            <div className="icon-card">
             <img
               src={IconHandWithCoin}
               alt="Icon: Hand with coin in between index finger and thumb"
             />
-          </div>
-          <div className="get-involved-text">
-
-            <h2>Get Help</h2>
-            <h2>Volunteer</h2>
             <h2>Donate</h2>
+            </div>
+            
           </div>
         </div>
       </Layout>

@@ -8,9 +8,7 @@ const DeadLinks = () => {
     return(
     <>
     <Layout>
-        <div className="dead-image-div">
-            <img className="construction-image" src={Construction} alt="Graphic of a cartoon construction worker and construction site, above UNDER CONSTRUCTION text"/>
-        </div>
+        <div className="dead-image-div"></div>
     </Layout>
     </>
     )
