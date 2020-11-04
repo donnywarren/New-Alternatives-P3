@@ -16,10 +16,10 @@ const Footer = () => {
             <NavLink className="links" to="/coming-soon">
               About Us
             </NavLink>
-            <NavLink className="live-link" to="/our-stories">
+            <NavLink className="links" to="/our-stories">
               Our Stories
             </NavLink>
-            <NavLink className="live-link" to="/coming-soon">
+            <NavLink className="links" to="/coming-soon">
               Get Help
             </NavLink>
             <NavLink className="links" to="/coming-soon">
@@ -27,7 +27,7 @@ const Footer = () => {
             </NavLink>
             <a
               href="https://c8f5851f-9831-4bab-aa48-25c2b4f1b185.filesusr.com/ugd/9bb66f_f663ee9dc031481db99d551d043c6ae2.pdf"
-              className="live-link"
+              className="links"
               target="_blank" rel="noopener noreferrer"
             >
               Financial Report
@@ -62,7 +62,7 @@ const Footer = () => {
         <div className="bottom-footer">
           <h6 className="copyright">
             © 2020 by New Alternatives | 410 West 40th Street, New York, NY
-            10018 | info@newalternativesnyc.org
+            10018 | <span>info@newalternativesnyc.org</span>
           </h6>
           <img className="seal" src={Seal} />
         </div>
