@@ -28,7 +28,7 @@ const Footer = () => {
             <a
               href="https://c8f5851f-9831-4bab-aa48-25c2b4f1b185.filesusr.com/ugd/9bb66f_f663ee9dc031481db99d551d043c6ae2.pdf"
               className="live-link"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
             >
               Financial Report
             </a>

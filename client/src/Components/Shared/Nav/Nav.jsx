@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
 import MobileNavBar from "./MobileNavBar"
@@ -6,18 +6,25 @@ import Social from "../../Social/Social";
 import Logo from "../../../Assets/new-alternatives-title.png";
 
 const Nav = () => {
-  const size = window.innerWidth
   const [screenSize, updateScreenSize] = useState("")
 
+  useEffect(() => {
+    handleResize()
+  })
+
   const handleResize = () => {
-    updateScreenSize(size)
+    let size = window.innerWidth
+    size < 700 ?
+      updateScreenSize("mobile") : 
+      updateScreenSize("")
   }
+
   window.addEventListener("resize", handleResize)
 
-
+  
   return (
     <>
-      <div className="nav-component">
+      <div className={"nav-component"}>
         <div className="title" alt="new alternatives">
           <div>
             <NavLink className="nav-links-logo" to="/">
@@ -25,9 +32,7 @@ const Nav = () => {
             </NavLink>
           </div>
         </div>
-        {screenSize < 700 ? 
-        
-        <MobileNavBar/> :
+        {screenSize !== "mobile" ? 
         
           <div className="nav-bar">
             <div className="top-nav-bar">
@@ -41,7 +46,7 @@ const Nav = () => {
               </div>
               <a className="donate"
                 href="https://fundraise.newalternativesnyc.org/give/157653/#!/donation/checkout"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 Donate
               </a>
@@ -49,21 +54,23 @@ const Nav = () => {
             <div className="nav-menu" alt="navigation menu">
               <NavLink className="nav-links" to="/">
                 Home
-            </NavLink>
+              </NavLink>
               <NavLink className="nav-links" to="/coming-soon">
                 About Us
-            </NavLink>
+              </NavLink>
               <NavLink className="nav-links" to="/our-stories">
                 Our Stories
-            </NavLink>
+              </NavLink>
               <NavLink className="nav-links" to="/coming-soon">
                 Get Help
-            </NavLink>
+              </NavLink>
               <NavLink className="nav-links" to="/coming-soon">
                 Get Involved
-            </NavLink>
+              </NavLink>
             </div>
-          </div>
+          </div> :
+
+          <MobileNavBar /> 
         }
       </div>
     </>
