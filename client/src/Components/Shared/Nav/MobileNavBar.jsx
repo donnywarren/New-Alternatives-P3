@@ -6,15 +6,24 @@ const MobileNavBar = () => {
   
   const [displayVisible, updateDisplayVisible] = useState("")
   const [curtain, updateCurtain] = useState("")
+  const [top, updateTop] = useState("")
+  const [middle, updateMiddle] = useState("")
+  const [bottom, updateBottom] = useState("")
 
 
   const handleClick = (e) => {
     if (displayVisible === "") {
       updateDisplayVisible("drop-down-container-visible");
       updateCurtain("mobile-nav-link-curtain-visable");
+      updateTop("top");
+      updateMiddle("middle");
+      updateBottom("bottom");
     } else {
       updateDisplayVisible("");
       updateCurtain("");
+      updateTop("");
+      updateMiddle("");
+      updateBottom("");
     }
   
   }
@@ -30,9 +39,9 @@ const MobileNavBar = () => {
             Donate
           </a>
           <div className="hamburger" onClick={handleClick}>
-            <div className="black-bar top"></div>
-            <div className="black-bar middle"></div>
-            <div className="black-bar bottom"></div>
+            <div className={`black-bar ${top}`}></div>
+            <div className={`black-bar ${middle}`}></div>
+            <div className={`black-bar ${bottom}`}></div>
           </div>
         </div>
 
