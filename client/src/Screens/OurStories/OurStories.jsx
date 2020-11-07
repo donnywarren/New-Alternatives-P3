@@ -33,6 +33,7 @@ const OurStories = () => {
             </p>
           </div>
         </div>
+        <div className="spacer"></div>
         <TestimonialsCarousel content={testimonials} />
         <VideoCarousel />
         <PhotoCarousel />
