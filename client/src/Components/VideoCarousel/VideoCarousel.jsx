@@ -21,7 +21,13 @@ const VideoCarousel = () => {
 
   useEffect(() => {
     function handleResize() {
-      updateNumOfSlides(Math.floor(window.innerWidth / 415));
+      if (window.innerWidth < 415) {
+        updateNumOfSlides(1)
+        console.log(numOfSlides)
+      } else {
+        updateNumOfSlides(Math.floor(window.innerWidth / 415));
+      }
+      
 
       window.addEventListener("resize", handleResize);
     }
