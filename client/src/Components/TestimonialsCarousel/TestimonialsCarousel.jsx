@@ -6,6 +6,7 @@ import {
   Slide,
   ButtonBack,
   ButtonNext,
+  Image
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import "./TestimonialsCarousel.css";
@@ -24,19 +25,22 @@ function Carousel(props) {
         naturalSlideHeight={200}
         totalSlides={testimonials.length}
         infinite={true}
+        // hasMasterSpinner={true}
       >
         <ButtonBack className="testimonial-btn testimonial-back-btn">
           <img className="back-icon" src={LeftArrow} alt="left arrow" />
         </ButtonBack>
-        <Slider className="slicer-container">
+        <Slider className="slider-container">
           {testimonials.map((testimonial, ndx) => {
             return (
-              <Slide key={ndx}>
+              <Slide key={ndx} index={ndx} className="individual-slide">
+                <Image>
                 <img
                   src={LeftQuote}
                   alt="quote mark"
                   className="quote left-quote"
                 />
+              
                 <div className="testimonial-container">
                   <div className="testimonial">{testimonial.content}</div>
                   <div className="testimonial-author-box">
@@ -45,6 +49,8 @@ function Carousel(props) {
                     </h5>
                   </div>
                 </div>
+                
+                
                 <div className="testimonial-button-container">
                   <Link className="add-testimonial" to={`/create-testimonial`}>
                     add testimonial
@@ -65,6 +71,8 @@ function Carousel(props) {
                   alt="quote mark"
                   className="quote right-quote"
                 />
+                </Image>
+                
               </Slide>
             );
           })}
