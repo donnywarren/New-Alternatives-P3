@@ -32,7 +32,7 @@ const Footer = () => {
             >
               Financial Report
             </a>
-            <NavLink className="links" to="/">
+            <NavLink className="links" to="/coming-soon">
               Contact Us
             </NavLink>
           </div>
