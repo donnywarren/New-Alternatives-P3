@@ -30,8 +30,12 @@ function PhotoCarousel() {
 
   useEffect(() => {
     function handleResize() {
-      updateNumOfSlides(Math.floor(window.innerWidth / 415));
-
+      if (window.innerWidth < 415) {
+        updateNumOfSlides(1)
+      } else {
+        updateNumOfSlides(Math.floor(window.innerWidth / 415));
+      }
+      
       window.addEventListener("resize", handleResize);
     }
     handleResize();
