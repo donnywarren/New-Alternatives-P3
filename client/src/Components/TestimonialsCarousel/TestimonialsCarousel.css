@@ -5,11 +5,6 @@
   font-family: "Open Sans", sans-serif;
 }
 
-/* .slider-container {
-} */
-
-/* .individual-slide {
-} */
 .quote {
   position: absolute;
   width: 45px;
@@ -17,7 +12,7 @@
 }
 
 .right-quote {
-  bottom: 60px;
+  bottom: 80px;
   right: 0px;
 }
 
@@ -57,8 +52,6 @@
 }
 
 .horizontalSlider___281Ls {
-  /* carousel built in classname */
-  /* background-color: yellow; */
   height: 300px;
 }
 
@@ -134,5 +127,15 @@
 
   .testimonial {
     width: 240px;
+  }
+
+  .testimonial-back-btn {
+    top: 35%;
+    left: -8vw;
+  }
+
+  .testimonial-forward-btn {
+    top: 35%;
+    right: -8vw;
   }
 }
