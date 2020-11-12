@@ -25,7 +25,7 @@ function Carousel(props) {
         naturalSlideHeight={200}
         totalSlides={testimonials.length}
         infinite={true}
-        // hasMasterSpinner={true}
+        hasMasterSpinner={true}
       >
         <ButtonBack className="testimonial-btn testimonial-back-btn">
           <img className="back-icon" src={LeftArrow} alt="left arrow" />

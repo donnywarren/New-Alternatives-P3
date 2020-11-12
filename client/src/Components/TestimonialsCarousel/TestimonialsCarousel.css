@@ -43,7 +43,7 @@
   font-size: 14px;
   line-height: 1.2 !important;
   width: 350px;
-  /* margin-left: 5px; */
+  padding-left: 5px;
   margin: 0 auto;
   overflow-wrap: break-word;
   font-weight: 600;
