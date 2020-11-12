@@ -1,7 +1,7 @@
 .complete-photo-carousel {
   display: flex;
   justify-content: center;
-  margin: 200px 0;
+  margin: 200px 0 100px 0;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -30,7 +30,7 @@ a h3 {
 
 .photo-image {
   width: 26vw;
-  min-width: 335px;
+  min-width: 325px;
 }
 
 .rela {
@@ -65,12 +65,12 @@ a h3 {
 }
 
 .back-btn-photo {
-  top: 50%;
+  top: 42%;
   left: -5%;
 }
 
 .forward-btn-photo {
-  top: 50%;
+  top: 42%;
   right: -5%;
 }
 
@@ -104,11 +104,21 @@ a h3 {
 
 @media only screen and (max-width: 700px) {
   .photo-carousel {
-    width: 350px !important;
+    width: 325px !important;
   }
 
   .photo-component-title {
     position: absolute;
-    left: 1.7vw;
+    left: 1vw;
+  }
+
+  .back-btn-photo {
+    top: 43%;
+    left: -9%;
+  }
+
+  .forward-btn-photo {
+    top: 43%;
+    right: -9%;
   }
 }
