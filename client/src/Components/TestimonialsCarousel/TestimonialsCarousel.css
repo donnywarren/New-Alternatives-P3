@@ -102,3 +102,30 @@
 .edit-testimonial:hover {
   cursor: pointer;
 }
+
+/* ====================== MEDIA QUERIES ======================= */
+
+@media only screen and (max-width: 700px) {
+  .quote {
+    position: absolute;
+    width: 35px;
+    height: 25px;
+  }
+  .carousel {
+    position: relative;
+    width: 350px;
+  }
+
+  /* .testimonial-container {
+    height: 400px !important;
+  } */
+
+  .testimonial {
+    font-size: 14px;
+    line-height: 1.2 !important;
+    width: 250px;
+    margin-left: 5px;
+    overflow-wrap: break-word;
+    font-weight: 600;
+  }
+}
