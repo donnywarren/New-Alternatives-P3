@@ -7,6 +7,7 @@ import Logo from "../../../Assets/new-alternatives-title.png";
 
 const Nav = () => {
   const [screenSize, updateScreenSize] = useState("")
+  const [whiteOut, updateWhiteOut] = useState("")
 
   useEffect(() => {
     handleResize()
@@ -24,6 +25,9 @@ const Nav = () => {
   
   return (
     <>
+      <div className={`white-out-screen ${whiteOut}`}>
+
+      </div>
       <div className={"nav-component"}>
         <div className="title" alt="new alternatives">
           <div>
@@ -70,7 +74,7 @@ const Nav = () => {
             </div>
           </div> :
 
-          <MobileNavBar /> 
+          <MobileNavBar updateWhiteOut={updateWhiteOut}/> 
         }
       </div>
     </>

@@ -1,3 +1,7 @@
+.nav-bar {
+  z-index: 3;
+}
+
 .position-contianer {
   position: relative;
   top: 0;

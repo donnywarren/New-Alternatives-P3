@@ -2,13 +2,15 @@ import React, {useState} from "react"
 import { NavLink } from "react-router-dom";
 import "./MobileNavBar.css"
 
-const MobileNavBar = () => {
+const MobileNavBar = (props) => {
   
   const [displayVisible, updateDisplayVisible] = useState("")
   const [curtain, updateCurtain] = useState("")
   const [top, updateTop] = useState("")
   const [middle, updateMiddle] = useState("")
   const [bottom, updateBottom] = useState("")
+
+  const updateWhiteOut = props.updateWhiteOut
 
 
   const handleClick = (e) => {
@@ -18,18 +20,20 @@ const MobileNavBar = () => {
       updateTop("top");
       updateMiddle("middle");
       updateBottom("bottom");
+      updateWhiteOut("white-out-screen-active")
     } else {
       updateDisplayVisible("");
       updateCurtain("");
       updateTop("");
       updateMiddle("");
       updateBottom("");
+      updateWhiteOut("")
     }
   
   }
 
   return (
-    <div className=".nav-bar">
+    <div className="nav-bar">
       <div className="position-container">
         <div className="donate-burger-container">
           <a className="mobile-donate"
