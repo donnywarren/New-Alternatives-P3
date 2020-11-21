@@ -11,7 +11,7 @@
 
 ## MongoDB Schema
 
-``` 
+```
 const Testimonial = new Schema(
     {
         content: { type: String, required: true},
@@ -19,14 +19,10 @@ const Testimonial = new Schema(
     },
     { timestamps: true }
 )
-``` 
+```
 
 ## Overview
 
-In our recreation of the New Alternatives website, our team will implement the design specifications outlined by our UX team. Additionally, we will add functionalities to the Our Stories page, specifically allowing the user to not only add their own personal testimonies, but also read, edit and delete them as well. We will create simple and clean UI as originally mapped out by the UX team. Ultimately, our aim is to create a site that both engages and educates the user to the services that New Alternatives provides. 
+In our recreation of the New Alternatives website, our team will implement the design specifications outlined by our UX team. Additionally, we will add functionalities to the Our Stories page, specifically allowing the user to not only add their own personal testimonies, but also read, edit and delete them as well. We will create simple and clean UI as originally mapped out by the UX team. Ultimately, our aim is to create a site that both engages and educates the user to the services that New Alternatives provides.
 
 ## MVP/Post-MVP
-
-[GitHub Projects](https://github.com/chrisratsimba123/new-alternatives-app/projects/1)
-
-
